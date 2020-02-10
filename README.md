@@ -1,5 +1,7 @@
 # DeathStar
 
+[![Coverage Status](https://coveralls.io/repos/github/betabrandao/phoenix-test/badge.svg?branch=master)](https://coveralls.io/github/betabrandao/phoenix-test?branch=master)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
