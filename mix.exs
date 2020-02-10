@@ -6,6 +6,13 @@ defmodule DeathStar.MixProject do
       app: :death_star,
       version: "0.1.0",
       elixir: "~> 1.5",
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+         coveralls: :test, 
+         "coveralls.detail": :test, 
+         "coveralls.post": :test, 
+         "coveralls.html": :test
+         ],
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -35,6 +42,7 @@ defmodule DeathStar.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:excoveralls, "~> 0.10", only: :test},
       {:phoenix, "~> 1.4.11"},
       {:phoenix_pubsub, "~> 1.1"},
       {:gettext, "~> 0.11"},
