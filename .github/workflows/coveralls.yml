@@ -3,16 +3,13 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: OTP 22.1.7 / Elixir 1.9.4
-    with:
-      otp-version: 22.0.7
-      elixir-version: 1.9.4
     env:
       MIX_ENV: test
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v1.0.0
-      - uses: actions/setup-elixir@v1.0.0
+      - name: Use OTP 22.0.7 / Elixir 1.9.4  
+        uses: actions/setup-elixir@v1.0.0
         with:
           otp-version: 22.0.7
           elixir-version: 1.9.4
